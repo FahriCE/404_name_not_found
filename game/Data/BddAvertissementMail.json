@@ -1,0 +1,154 @@
+{
+  "avertissements": [
+	{
+	  "id_mail": 1,
+	  "pas_assez_enseignants": "Le nombre d'enseignants pour la formation en informatique est insuffisant. Veuillez augmenter leur effectif pour répondre à la demande.",
+	  "trop_enseignants": "Le nombre d'enseignants pour la formation en informatique est trop élevé. Veuillez réduire leur effectif pour optimiser les ressources."
+	},
+	{
+	  "id_mail": 2,
+	  "pas_assez_enseignants": "La formation en informatique nécessite un nombre suffisant d'enseignants pour supporter l'effectif étudiant prévu.",
+	  "trop_enseignants": "Vous avez attribué trop d'enseignants pour cette formation en informatique. Merci de réajuster en fonction des besoins réels."
+	},
+	{
+	  "id_mail": 3,
+	  "pas_assez_enseignants": "La formation en médecine manque d'enseignants. Veuillez en affecter davantage pour garantir sa viabilité.",
+	  "trop_enseignants": "Le nombre d'enseignants assignés à la formation en médecine est excessif. Merci de réduire leur effectif."
+	},
+	{
+	  "id_mail": 4,
+	  "pas_assez_enseignants": "Le programme en mécanique automobile a besoin de plus d'enseignants pour être fonctionnel.",
+	  "trop_enseignants": "Le nombre d'enseignants pour la formation en mécanique automobile est trop élevé. Veuillez ajuster cette ressource."
+	},
+	{
+	  "id_mail": 5,
+	  "pas_assez_enseignants": "La formation en big data manque d'enseignants qualifiés. Veuillez en assigner davantage.",
+	  "trop_enseignants": "Le nombre d'enseignants pour la formation en big data est trop élevé. Merci de réajuster leur effectif."
+	},
+	{
+	  "id_mail": 6,
+	  "pas_assez_enseignants": "La formation en informatique nécessite un nombre suffisant d'enseignants pour répondre à une demande croissante.",
+	  "trop_enseignants": "Vous avez alloué trop d'enseignants pour cette formation en informatique. Veuillez optimiser leur effectif."
+	},
+	{
+	  "id_mail": 7,
+	  "pas_assez_enseignants": "La formation en médecine ne peut pas démarrer avec si peu d'enseignants. Veuillez corriger cela rapidement.",
+	  "trop_enseignants": "Un nombre trop élevé d'enseignants a été assigné à la formation en médecine. Merci de rectifier."
+	},
+	{
+	  "id_mail": 8,
+	  "pas_assez_enseignants": "La formation en mécanique automobile nécessite davantage d'enseignants pour encadrer les étudiants.",
+	  "trop_enseignants": "Trop d'enseignants ont été assignés à la formation en mécanique automobile. Veuillez réduire cet effectif."
+	},
+	{
+	  "id_mail": 9,
+	  "pas_assez_enseignants": "Le programme en big data manque d'enseignants pour supporter la cohorte prévue.",
+	  "trop_enseignants": "Le nombre d'enseignants pour la formation en big data dépasse les besoins. Veuillez corriger cela."
+	},
+	{
+	  "id_mail": 10,
+	  "pas_assez_enseignants": "Une session informatique avec un effectif étudiant élevé nécessite davantage d'enseignants.",
+	  "trop_enseignants": "Le nombre d'enseignants pour la session informatique est trop élevé. Merci de le réduire."
+	},
+	{
+	  "id_mail": 11,
+	  "pas_assez_enseignants": "Les enseignants pour la formation en médecine ne suffisent pas. Il est nécessaire d'en ajouter.",
+	  "trop_enseignants": "Un surplus d'enseignants a été affecté à la formation en médecine. Veuillez ajuster leur effectif."
+	},
+	{
+	  "id_mail": 12,
+	  "pas_assez_enseignants": "La formation en mécanique automobile nécessite un nombre plus élevé d'enseignants.",
+	  "trop_enseignants": "Le nombre d'enseignants assignés à la formation en mécanique automobile est trop élevé. Veuillez le réduire."
+	},
+	{
+	  "id_mail": 13,
+	  "pas_assez_enseignants": "Le programme en big data ne pourra pas fonctionner correctement sans un nombre suffisant d'enseignants.",
+	  "trop_enseignants": "Le nombre d'enseignants pour la formation en big data est disproportionné. Merci d'optimiser cette ressource."
+	},
+	{
+	  "id_mail": 14,
+	  "pas_assez_enseignants": "La formation informatique nécessite plus d'enseignants pour répondre à une forte demande.",
+	  "trop_enseignants": "Le nombre d'enseignants pour la formation informatique dépasse les besoins. Merci de réduire cet effectif."
+	},
+	{
+	  "id_mail": 15,
+	  "pas_assez_enseignants": "La formation en mécanique automobile nécessite un nombre suffisant d'enseignants pour les aspects pratiques.",
+	  "trop_enseignants": "Trop d'enseignants ont été affectés à la formation en mécanique automobile. Réduisez cet effectif pour optimiser les ressources."
+	},
+	{
+	  "id_mail": 16,
+	  "pas_assez_enseignants": "Une nouvelle session en médecine nécessite davantage d'enseignants pour garantir une formation de qualité.",
+	  "trop_enseignants": "Le nombre d'enseignants affectés à cette session en médecine est excessif. Merci de corriger."
+	},
+	{
+	  "id_mail": 17,
+	  "pas_assez_enseignants": "La session spéciale en informatique ne peut pas être lancée avec si peu d'enseignants.",
+	  "trop_enseignants": "Le nombre d'enseignants pour la session spéciale en informatique est trop élevé. Réduisez leur effectif."
+	},
+	{
+	  "id_mail": 18,
+	  "pas_assez_enseignants": "La session en big data manque d'enseignants pour encadrer correctement les étudiants.",
+	  "trop_enseignants": "Trop d'enseignants ont été alloués à la formation en big data. Merci de réduire cet effectif."
+	},
+	{
+	  "id_mail": 19,
+	  "pas_assez_enseignants": "La formation en informatique nécessite davantage d'enseignants pour une organisation optimale.",
+	  "trop_enseignants": "Un surplus d'enseignants a été assigné à la formation en informatique. Merci d'optimiser cela."
+	},
+	{
+	  "id_mail": 20,
+	  "pas_assez_enseignants": "La nouvelle session en médecine doit avoir un effectif suffisant d'enseignants pour commencer.",
+	  "trop_enseignants": "Un trop grand nombre d'enseignants est prévu pour cette session en médecine. Veuillez rectifier."
+	},
+	{
+	  "id_mail": 21,
+	  "pas_assez_enseignants": "Une formation orientée mécanique automobile nécessite davantage d'enseignants pour les ateliers pratiques.",
+	  "trop_enseignants": "Le nombre d'enseignants pour la formation mécanique automobile est trop élevé. Réduisez cet effectif."
+	},
+	{
+	  "id_mail": 22,
+	  "pas_assez_enseignants": "La session en big data requiert plus d'enseignants pour fonctionner correctement.",
+	  "trop_enseignants": "Trop d'enseignants ont été affectés à cette session en big data. Merci de rectifier."
+	},
+	{
+	  "id_mail": 23,
+	  "pas_assez_enseignants": "Une nouvelle session en médecine nécessite un nombre suffisant d'enseignants.",
+	  "trop_enseignants": "Un surplus d'enseignants a été assigné à cette session en médecine. Merci de rectifier."
+	},
+	{
+	  "id_mail": 24,
+	  "pas_assez_enseignants": "La formation informatique avancée manque d'enseignants pour répondre aux besoins des étudiants.",
+	  "trop_enseignants": "Le nombre d'enseignants pour la formation informatique avancée est excessif. Merci de corriger."
+	},
+	{
+	  "id_mail": 25,
+	  "pas_assez_enseignants": "La formation en mécanique automobile nécessite plus d'enseignants pour assurer les cours pratiques.",
+	  "trop_enseignants": "Trop d'enseignants ont été assignés à la formation en mécanique automobile. Merci d'ajuster cet effectif."
+	},
+	{
+	  "id_mail": 26,
+	  "pas_assez_enseignants": "La session avancée en big data a besoin de davantage d'enseignants pour démarrer.",
+	  "trop_enseignants": "Le nombre d'enseignants affectés à cette session en big data est excessif. Merci de rectifier."
+	},
+	{
+	  "id_mail": 27,
+	  "pas_assez_enseignants": "La formation informatique du soir nécessite un nombre suffisant d'enseignants pour son lancement.",
+	  "trop_enseignants": "Un nombre trop important d'enseignants a été attribué à la formation informatique du soir. Réduisez cet effectif."
+	},
+	{
+	  "id_mail": 28,
+	  "pas_assez_enseignants": "La session spéciale en mécanique automobile manque d'enseignants pour encadrer les professionnels.",
+	  "trop_enseignants": "Trop d'enseignants sont assignés à la session spéciale en mécanique automobile. Merci de rectifier."
+	},
+	{
+	  "id_mail": 29,
+	  "pas_assez_enseignants": "Une session en big data nécessite plus d'enseignants pour répondre à la demande.",
+	  "trop_enseignants": "Un excès d'enseignants a été attribué à cette session en big data. Merci de corriger."
+	},
+	{
+	  "id_mail": 30,
+	  "pas_assez_enseignants": "La formation avancée en médecine nécessite davantage d'enseignants pour sa réussite.",
+	  "trop_enseignants": "Trop d'enseignants ont été assignés à la formation avancée en médecine. Réduisez cet effectif."
+	}
+  ]
+}

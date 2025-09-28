@@ -1,0 +1,100 @@
+[gd_scene load_steps=7 format=3 uid="uid://d1o7v3ox60gl4"]
+
+[ext_resource type="Script" path="res://Scripts/CreationFormationContainer.gd" id="1_v8utw"]
+[ext_resource type="Texture2D" uid="uid://bon8whtrmwty4" path="res://Images/imagetxt.png" id="2_5b5g5"]
+[ext_resource type="Script" path="res://Scripts/CreationFormationWindow.gd" id="3_ilmk0"]
+[ext_resource type="Texture2D" uid="uid://xl8bt5s1d66l" path="res://Images/imgFormationExemple.png" id="4_gqqwa"]
+[ext_resource type="Texture2D" uid="uid://b41x7ktgjvyx2" path="res://Images/Etape2Formation.png" id="5_yd345"]
+[ext_resource type="Texture2D" uid="uid://qope1wxbm4ed" path="res://Images/Etape3formationBonneTaille.png" id="6_pmy1e"]
+
+[node name="CreationFormationContainer" type="VBoxContainer"]
+custom_minimum_size = Vector2(125, 100)
+offset_left = 10.0
+offset_top = 20.0
+offset_right = 135.0
+offset_bottom = 145.0
+script = ExtResource("1_v8utw")
+
+[node name="TextureButton" type="TextureButton" parent="."]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+texture_normal = ExtResource("2_5b5g5")
+stretch_mode = 5
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+custom_minimum_size = Vector2(75, 25)
+layout_mode = 2
+size_flags_vertical = 3
+bbcode_enabled = true
+text = "[center]Comment créer une formation ?[/center]"
+fit_content = true
+scroll_active = false
+tab_size = 2
+
+[node name="CreationFormationWindow" type="Window" parent="."]
+auto_translate_mode = 1
+title = "Comment créer une formation"
+initial_position = 1
+size = Vector2i(1000, 500)
+visible = false
+script = ExtResource("3_ilmk0")
+
+[node name="TabContainer" type="TabContainer" parent="CreationFormationWindow"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+current_tab = 0
+
+[node name="Etape 1" type="PanelContainer" parent="CreationFormationWindow/TabContainer"]
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="VSplitContainer" type="VSplitContainer" parent="CreationFormationWindow/TabContainer/Etape 1"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="CreationFormationWindow/TabContainer/Etape 1/VSplitContainer"]
+layout_mode = 2
+texture = ExtResource("4_gqqwa")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CreationFormationWindow/TabContainer/Etape 1/VSplitContainer"]
+layout_mode = 2
+text = "Pour la création d'une formation vous commencez par selectionné avec le click la formation souhaité "
+
+[node name="Etape 2" type="PanelContainer" parent="CreationFormationWindow/TabContainer"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 1
+
+[node name="VSplitContainer" type="VSplitContainer" parent="CreationFormationWindow/TabContainer/Etape 2"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="CreationFormationWindow/TabContainer/Etape 2/VSplitContainer"]
+layout_mode = 2
+texture = ExtResource("5_yd345")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CreationFormationWindow/TabContainer/Etape 2/VSplitContainer"]
+layout_mode = 2
+text = "Ensuite vous mettez combien d'enseignants et combien d'emplacement maximale votre formation va avoir."
+
+[node name="Etape 3" type="PanelContainer" parent="CreationFormationWindow/TabContainer"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 2
+
+[node name="VSplitContainer" type="VSplitContainer" parent="CreationFormationWindow/TabContainer/Etape 3"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="CreationFormationWindow/TabContainer/Etape 3/VSplitContainer"]
+layout_mode = 2
+texture = ExtResource("6_pmy1e")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CreationFormationWindow/TabContainer/Etape 3/VSplitContainer"]
+layout_mode = 2
+text = "Et vous créez la formation en appuyant sur l'icone + ou sur l'icône - pour remettre à 0 la selection "
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
+[connection signal="close_requested" from="CreationFormationWindow" to="CreationFormationWindow" method="_on_close_requested"]

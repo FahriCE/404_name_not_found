@@ -1,0 +1,21 @@
+# Godot-specific ignores
+.import/
+export.cfg
+export_presets.cfg
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# User-specific files
+*.tmp
+*.swp
+*.swo
+*.bak
+
+# Godot editor files
+.editor_settings-*
+
+# IDE-specific ignores
+.idea/
+.vscode/

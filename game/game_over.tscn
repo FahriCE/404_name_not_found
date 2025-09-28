@@ -1,0 +1,90 @@
+[gd_scene load_steps=10 format=3 uid="uid://dnq4nfa6pjabe"]
+
+[ext_resource type="Texture2D" uid="uid://cddvejxvuxtnh" path="res://Images/Letter.png" id="1_26gaa"]
+[ext_resource type="Script" path="res://Scripts/game_over.gd" id="1_h6tnu"]
+[ext_resource type="Texture2D" uid="uid://b3aoibqvokaff" path="res://Images/YouDied.png" id="3_fqan0"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gdhoy"]
+texture = ExtResource("1_26gaa")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dg7g1"]
+texture = ExtResource("3_fqan0")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_aomey"]
+bg_color = Color(0.145098, 0.372549, 0.862745, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_exxfu"]
+bg_color = Color(0.145098, 0.372549, 0.862745, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h8lky"]
+bg_color = Color(0.0478962, 0.183012, 0.476252, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lejg8"]
+bg_color = Color(0.145098, 0.372549, 0.862745, 1)
+
+[node name="GameOver" type="Panel"]
+offset_left = 389.0
+offset_top = 225.0
+offset_right = 1533.0
+offset_bottom = 839.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_gdhoy")
+script = ExtResource("1_h6tnu")
+
+[node name="TransitionTexture" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -389.0
+offset_top = -225.0
+offset_right = 1531.0
+offset_bottom = 855.0
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 360.0
+offset_top = 102.0
+offset_right = 810.0
+offset_bottom = 206.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_dg7g1")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 116.0
+offset_top = 261.0
+offset_right = 1012.0
+offset_bottom = 456.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 25
+text = "Je pense que ça ne va pas marcher avec toi car tu as fait trop d'erreurs. Tu es viré..."
+
+[node name="Boss" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 120.0
+offset_top = 414.0
+offset_right = 419.0
+offset_bottom = 479.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 30
+text = "Ton boss"
+
+[node name="Restart" type="Button" parent="."]
+layout_mode = 0
+offset_left = 794.0
+offset_top = 530.0
+offset_right = 937.0
+offset_bottom = 568.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_styles/hover = SubResource("StyleBoxFlat_aomey")
+theme_override_styles/normal = SubResource("StyleBoxFlat_exxfu")
+text = "Restart le jeu"
+
+[node name="MainScreen" type="Button" parent="."]
+layout_mode = 0
+offset_left = 946.0
+offset_top = 529.0
+offset_right = 1090.0
+offset_bottom = 566.0
+theme_override_styles/hover = SubResource("StyleBoxFlat_h8lky")
+theme_override_styles/normal = SubResource("StyleBoxFlat_lejg8")
+text = "Menu principal"
+
+[connection signal="pressed" from="Restart" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="MainScreen" to="." method="_on_button_pressed"]

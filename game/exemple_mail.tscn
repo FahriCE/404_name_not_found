@@ -1,0 +1,131 @@
+[gd_scene load_steps=17 format=3 uid="uid://b1t2nqmxprbxv"]
+
+[ext_resource type="Script" path="res://Scripts/exemple_mail.gd" id="1_bvb2h"]
+[ext_resource type="Script" path="res://Scripts/text_edit.gd" id="2_0nshp"]
+[ext_resource type="Texture2D" uid="uid://bon8whtrmwty4" path="res://Images/imagetxt.png" id="3_ta0d6"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sjh48"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ary8g"]
+bg_color = Color(0, 0, 0, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1r0d6"]
+bg_color = Color(0, 0, 0, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qaqqb"]
+bg_color = Color(0, 0, 0, 0)
+
+[sub_resource type="FontVariation" id="FontVariation_n1tiu"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6qe76"]
+bg_color = Color(0, 0, 0, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jo1tb"]
+bg_color = Color(0, 0, 0, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k8bs7"]
+bg_color = Color(0, 0, 0, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sxjlm"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_23rns"]
+bg_color = Color(0.0666667, 0.211765, 0.564706, 0.643137)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sspmo"]
+bg_color = Color(0.6, 0.6, 0.6, 0.0588235)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d6k2x"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_el3of"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[node name="ExempleMail" type="Panel"]
+custom_minimum_size = Vector2(1060, 140)
+offset_right = 1060.0
+offset_bottom = 162.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_sjh48")
+script = ExtResource("1_bvb2h")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+custom_minimum_size = Vector2(0, 140)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -525.0
+offset_top = -74.0
+offset_right = 525.0
+offset_bottom = 72.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="NomExpediteurMail" type="TextEdit" parent="HBoxContainer"]
+light_mask = 2
+custom_minimum_size = Vector2(160, 140)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_readonly_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_ary8g")
+theme_override_styles/focus = SubResource("StyleBoxFlat_1r0d6")
+theme_override_styles/read_only = SubResource("StyleBoxFlat_qaqqb")
+text = "Bowman Nathan"
+placeholder_text = "Nom Mail
+"
+editable = false
+wrap_mode = 1
+autowrap_mode = 1
+script = ExtResource("2_0nshp")
+
+[node name="ContenuMail" type="TextEdit" parent="HBoxContainer"]
+custom_minimum_size = Vector2(600, 130)
+layout_mode = 2
+size_flags_vertical = 4
+mouse_force_pass_scroll_events = false
+theme_override_colors/font_readonly_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontVariation_n1tiu")
+theme_override_styles/normal = SubResource("StyleBoxFlat_6qe76")
+theme_override_styles/focus = SubResource("StyleBoxFlat_jo1tb")
+theme_override_styles/read_only = SubResource("StyleBoxFlat_k8bs7")
+text = "Bonjour et bienvenue dans l'équipe ! Vous êtes chargé de créer des formations post-bac adaptées aux besoins actuels. Ce tutoriel va vous aider à comprendre comment tout fonctionne. \\n\\nVotre première tâche est simple : créez une formation en informatique qui accueille 30 étudiants et 3 enseignants. Voici les étapes à suivre : \\n1. Ouvrez la page de création de formation. \\n2. Sélectionnez 'Informatique' dans la liste des formations. \\n3. Configurez le nombre d'étudiants à 30 et d'enseignants à 3. \\n4. Validez votre choix.\\n\\nUne fois terminé, vous verrez un récapitulatif de votre formation et l'impact sur la satisfaction générale. Bonne chance et n'oubliez pas : chaque décision compte !"
+placeholder_text = "Contenu du mail"
+editable = false
+wrap_mode = 1
+
+[node name="PageTexteDuMail" type="Window" parent="HBoxContainer/ContenuMail"]
+initial_position = 2
+size = Vector2i(1000, 500)
+visible = false
+
+[node name="RichTextLabel" type="RichTextLabel" parent="HBoxContainer/ContenuMail/PageTexteDuMail"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_sxjlm")
+fit_content = true
+
+[node name="Button" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_23rns")
+icon = ExtResource("3_ta0d6")
+
+[node name="DateRecuMail" type="TextEdit" parent="HBoxContainer"]
+custom_minimum_size = Vector2(180, 130)
+layout_mode = 2
+theme_override_colors/font_readonly_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = 60
+theme_override_styles/normal = SubResource("StyleBoxFlat_sspmo")
+theme_override_styles/focus = SubResource("StyleBoxFlat_d6k2x")
+theme_override_styles/read_only = SubResource("StyleBoxFlat_el3of")
+text = "Reçu :"
+editable = false
+
+[connection signal="close_requested" from="HBoxContainer/ContenuMail/PageTexteDuMail" to="." method="_on_texte_du_mail_close_requested"]
+[connection signal="pressed" from="HBoxContainer/Button" to="." method="_on_button_pressed"]

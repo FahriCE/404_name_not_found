@@ -1,0 +1,493 @@
+[gd_scene load_steps=39 format=3 uid="uid://45d8p5osl6c0"]
+
+[ext_resource type="Script" path="res://Scripts/mainScript.gd" id="1_xxrgm"]
+[ext_resource type="Texture2D" uid="uid://cttf6wvpfv7e5" path="res://Images/Screen2.png" id="2_jq63a"]
+[ext_resource type="Script" path="res://Scripts/formation_chose_container.gd" id="3_losim"]
+[ext_resource type="Texture2D" uid="uid://d3cwmtxsqs2re" path="res://Images/FolderC.png" id="3_qh8jc"]
+[ext_resource type="Script" path="res://Scripts/FileExplorerWindow.gd" id="4_f52mv"]
+[ext_resource type="Script" path="res://Scripts/FileExplorerContainer.gd" id="7_47e7k"]
+[ext_resource type="Script" path="res://Scripts/MenuEchap.gd" id="7_gs07i"]
+[ext_resource type="Script" path="res://Scripts/OptionMenu.gd" id="8_2lyrw"]
+[ext_resource type="Texture2D" uid="uid://pyyx00q4x3a2" path="res://Images/2329706.jpg" id="8_evkvq"]
+[ext_resource type="Script" path="res://Scripts/HowsMailsWorkingContainer.gd" id="10_5w3as"]
+[ext_resource type="Script" path="res://Scripts/HowsMailsWorkingWindow.gd" id="10_d83ts"]
+[ext_resource type="Texture2D" uid="uid://2xmhynl3xwsg" path="res://Images/FolderCopen.png" id="10_nqtgg"]
+[ext_resource type="Script" path="res://Scripts/panel_mail.gd" id="11_dyejx"]
+[ext_resource type="Texture2D" uid="uid://bon8whtrmwty4" path="res://Images/imagetxt.png" id="14_78etm"]
+[ext_resource type="Script" path="res://Scripts/formation_chose.gd" id="15_5dh7d"]
+[ext_resource type="Texture2D" uid="uid://bmbxg0lomwrjy" path="res://Images/Etapeuh1Mail.png" id="16_aypta"]
+[ext_resource type="Script" path="res://Scripts/Formations.gd" id="16_c3t4m"]
+[ext_resource type="PackedScene" uid="uid://d1o7v3ox60gl4" path="res://creation_formation_container.tscn" id="16_n23hm"]
+[ext_resource type="Texture2D" uid="uid://bgq1nw4anx04a" path="res://Images/Add.png" id="16_ylvly"]
+[ext_resource type="Texture2D" uid="uid://bui6b7kh51d7s" path="res://Images/Etape2Mail.png" id="17_buyno"]
+[ext_resource type="Script" path="res://Scripts/FormationWindow.gd" id="17_grwio"]
+[ext_resource type="Texture2D" uid="uid://37lgjl73o66y" path="res://Images/FormationCreerEtape1.png" id="19_5iy3u"]
+[ext_resource type="Texture2D" uid="uid://bqmhm7w17fefh" path="res://Images/Mail.png" id="20_7veut"]
+[ext_resource type="Texture2D" uid="uid://cjp13nvr174qo" path="res://Images/formationCreerEtape2.png" id="20_pyilq"]
+[ext_resource type="Texture2D" uid="uid://c2qwbwbjcv0iq" path="res://Images/MailPressed.png" id="21_3lkn0"]
+[ext_resource type="Script" path="res://Scripts/v_box_container.gd" id="21_q22r0"]
+[ext_resource type="PackedScene" uid="uid://b1t2nqmxprbxv" path="res://exemple_mail.tscn" id="22_1wtnn"]
+[ext_resource type="Script" path="res://Scripts/progress_bar.gd" id="24_hfs7x"]
+[ext_resource type="Texture2D" uid="uid://cfo8wtbo17pta" path="res://Images/NextRoundYear.png" id="26_byq3j"]
+[ext_resource type="Texture2D" uid="uid://cevkc44qj7eqn" path="res://Images/NextRoundYearPressed.png" id="26_y6i4d"]
+[ext_resource type="PackedScene" uid="uid://dnq4nfa6pjabe" path="res://game_over.tscn" id="29_8dv2t"]
+[ext_resource type="PackedScene" uid="uid://d20xmtt7mkgi2" path="res://window_info_sup.tscn" id="30_1hxs5"]
+[ext_resource type="Texture2D" uid="uid://gv7q37tx02rv" path="res://Images/CellPhone.png" id="30_34m8q"]
+[ext_resource type="Script" path="res://Scripts/button_2.gd" id="31_mapib"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6ujtw"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dpj4c"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4dkif"]
+bg_color = Color(0, 0, 0, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3ky2x"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_color = Color(0.8, 0.8, 0.8, 0.258824)
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_xxrgm")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_top = 2.0
+offset_right = 480.0
+offset_bottom = 272.0
+scale = Vector2(4, 4)
+texture = ExtResource("2_jq63a")
+
+[node name="FormationChoseContainer" type="PanelContainer" parent="."]
+offset_left = 74.0
+offset_top = 187.0
+offset_right = 114.0
+offset_bottom = 227.0
+scale = Vector2(1.8, 1.88)
+theme_override_styles/panel = SubResource("StyleBoxEmpty_6ujtw")
+script = ExtResource("3_losim")
+
+[node name="TextureButton" type="TextureButton" parent="FormationChoseContainer"]
+layout_mode = 2
+texture_normal = ExtResource("16_ylvly")
+stretch_mode = 5
+
+[node name="FormationChose" type="Window" parent="FormationChoseContainer"]
+initial_position = 1
+size = Vector2i(1560, 870)
+visible = false
+script = ExtResource("15_5dh7d")
+
+[node name="EscapeMenu" type="Window" parent="."]
+initial_position = 1
+size = Vector2i(150, 150)
+visible = false
+script = ExtResource("7_gs07i")
+
+[node name="LeaveGameButton" type="Button" parent="EscapeMenu"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -55.5
+offset_top = -35.0
+offset_right = 55.5
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 0
+text = " Leave Game "
+
+[node name="GameOptionButton" type="Button" parent="EscapeMenu"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -55.5
+offset_top = -70.0
+offset_right = 55.5
+offset_bottom = -39.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Option"
+
+[node name="OptionMenu" type="Window" parent="EscapeMenu"]
+initial_position = 1
+size = Vector2i(800, 400)
+visible = false
+script = ExtResource("8_2lyrw")
+
+[node name="FileExplorerContainer" type="VBoxContainer" parent="."]
+custom_minimum_size = Vector2(125, 100)
+offset_left = 50.0
+offset_top = 50.0
+offset_right = 125.0
+offset_bottom = 154.0
+script = ExtResource("7_47e7k")
+
+[node name="FileExplorerTextureButton" type="TextureButton" parent="FileExplorerContainer"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+texture_normal = ExtResource("3_qh8jc")
+texture_pressed = ExtResource("10_nqtgg")
+stretch_mode = 5
+
+[node name="RichTextLabel" type="RichTextLabel" parent="FileExplorerContainer"]
+custom_minimum_size = Vector2(75, 25)
+layout_mode = 2
+size_flags_vertical = 3
+bbcode_enabled = true
+text = "[center]Explorateur de fichiers[/center]"
+fit_content = true
+scroll_active = false
+tab_size = 2
+
+[node name="FileExplorerWindow" type="Window" parent="FileExplorerContainer"]
+title = "Explorateur de fichier"
+initial_position = 1
+size = Vector2i(1000, 600)
+visible = false
+script = ExtResource("4_f52mv")
+
+[node name="TextureRect" type="TextureRect" parent="FileExplorerContainer/FileExplorerWindow"]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("8_evkvq")
+expand_mode = 1
+
+[node name="GridContainer" type="GridContainer" parent="FileExplorerContainer/FileExplorerWindow"]
+offset_right = 40.0
+offset_bottom = 40.0
+columns = 3
+
+[node name="HowsMailsWorkingContainer" type="VBoxContainer" parent="FileExplorerContainer/FileExplorerWindow/GridContainer"]
+custom_minimum_size = Vector2(125, 100)
+layout_mode = 2
+script = ExtResource("10_5w3as")
+
+[node name="TextureButton" type="TextureButton" parent="FileExplorerContainer/FileExplorerWindow/GridContainer/HowsMailsWorkingContainer"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+texture_normal = ExtResource("14_78etm")
+stretch_mode = 5
+
+[node name="RichTextLabel" type="RichTextLabel" parent="FileExplorerContainer/FileExplorerWindow/GridContainer/HowsMailsWorkingContainer"]
+custom_minimum_size = Vector2(75, 25)
+layout_mode = 2
+size_flags_vertical = 3
+bbcode_enabled = true
+text = "[center]Comment fonctionne les mails ?[/center]"
+fit_content = true
+scroll_active = false
+tab_size = 2
+
+[node name="HowsMailsWorkingWindow" type="Window" parent="FileExplorerContainer/FileExplorerWindow/GridContainer/HowsMailsWorkingContainer"]
+title = "Comment fonctionne les mails"
+initial_position = 1
+size = Vector2i(1000, 500)
+visible = false
+script = ExtResource("10_d83ts")
+
+[node name="TabContainer" type="TabContainer" parent="FileExplorerContainer/FileExplorerWindow/GridContainer/HowsMailsWorkingContainer/HowsMailsWorkingWindow"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+current_tab = 0
+
+[node name="Etape 1" type="PanelContainer" parent="FileExplorerContainer/FileExplorerWindow/GridContainer/HowsMailsWorkingContainer/HowsMailsWorkingWindow/TabContainer"]
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="VSplitContainer" type="VSplitContainer" parent="FileExplorerContainer/FileExplorerWindow/GridContainer/HowsMailsWorkingContainer/HowsMailsWorkingWindow/TabContainer/Etape 1"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="FileExplorerContainer/FileExplorerWindow/GridContainer/HowsMailsWorkingContainer/HowsMailsWorkingWindow/TabContainer/Etape 1/VSplitContainer"]
+layout_mode = 2
+texture = ExtResource("16_aypta")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="FileExplorerContainer/FileExplorerWindow/GridContainer/HowsMailsWorkingContainer/HowsMailsWorkingWindow/TabContainer/Etape 1/VSplitContainer"]
+layout_mode = 2
+text = "Le mail contient l'expediteur le contenu du mail un bouton pour aggrandir et la date heure du mail"
+
+[node name="Etape 2" type="PanelContainer" parent="FileExplorerContainer/FileExplorerWindow/GridContainer/HowsMailsWorkingContainer/HowsMailsWorkingWindow/TabContainer"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 1
+
+[node name="VSplitContainer" type="VSplitContainer" parent="FileExplorerContainer/FileExplorerWindow/GridContainer/HowsMailsWorkingContainer/HowsMailsWorkingWindow/TabContainer/Etape 2"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="FileExplorerContainer/FileExplorerWindow/GridContainer/HowsMailsWorkingContainer/HowsMailsWorkingWindow/TabContainer/Etape 2/VSplitContainer"]
+layout_mode = 2
+texture = ExtResource("17_buyno")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="FileExplorerContainer/FileExplorerWindow/GridContainer/HowsMailsWorkingContainer/HowsMailsWorkingWindow/TabContainer/Etape 2/VSplitContainer"]
+layout_mode = 2
+text = "Vous pouvez appuyer sur l'icone texte ici pour aggrandir le mail si nécessaire"
+
+[node name="CreationFormationContainer" parent="FileExplorerContainer/FileExplorerWindow/GridContainer" instance=ExtResource("16_n23hm")]
+layout_mode = 2
+
+[node name="FormationCreerFonctionnement" type="VBoxContainer" parent="FileExplorerContainer/FileExplorerWindow/GridContainer"]
+custom_minimum_size = Vector2(125, 100)
+layout_mode = 2
+script = ExtResource("10_5w3as")
+
+[node name="TextureButton" type="TextureButton" parent="FileExplorerContainer/FileExplorerWindow/GridContainer/FormationCreerFonctionnement"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+texture_normal = ExtResource("14_78etm")
+stretch_mode = 5
+
+[node name="RichTextLabel" type="RichTextLabel" parent="FileExplorerContainer/FileExplorerWindow/GridContainer/FormationCreerFonctionnement"]
+custom_minimum_size = Vector2(75, 25)
+layout_mode = 2
+size_flags_vertical = 3
+bbcode_enabled = true
+text = "[center]Comment fonctionne le menu des formations déjà créé ?[/center]"
+fit_content = true
+scroll_active = false
+tab_size = 2
+
+[node name="HowsMailsWorkingWindow" type="Window" parent="FileExplorerContainer/FileExplorerWindow/GridContainer/FormationCreerFonctionnement"]
+auto_translate_mode = 1
+title = "Comment fonctionne les mails"
+initial_position = 1
+size = Vector2i(1000, 500)
+visible = false
+script = ExtResource("10_d83ts")
+
+[node name="TabContainer" type="TabContainer" parent="FileExplorerContainer/FileExplorerWindow/GridContainer/FormationCreerFonctionnement/HowsMailsWorkingWindow"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+current_tab = 0
+
+[node name="Etape 1" type="PanelContainer" parent="FileExplorerContainer/FileExplorerWindow/GridContainer/FormationCreerFonctionnement/HowsMailsWorkingWindow/TabContainer"]
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="VSplitContainer" type="VSplitContainer" parent="FileExplorerContainer/FileExplorerWindow/GridContainer/FormationCreerFonctionnement/HowsMailsWorkingWindow/TabContainer/Etape 1"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="FileExplorerContainer/FileExplorerWindow/GridContainer/FormationCreerFonctionnement/HowsMailsWorkingWindow/TabContainer/Etape 1/VSplitContainer"]
+layout_mode = 2
+texture = ExtResource("19_5iy3u")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="FileExplorerContainer/FileExplorerWindow/GridContainer/FormationCreerFonctionnement/HowsMailsWorkingWindow/TabContainer/Etape 1/VSplitContainer"]
+layout_mode = 2
+text = "Vous avez un récap de la formation. Vous avez la popularité et la croissance en plus avec le taux de réussite"
+
+[node name="Etape 2" type="PanelContainer" parent="FileExplorerContainer/FileExplorerWindow/GridContainer/FormationCreerFonctionnement/HowsMailsWorkingWindow/TabContainer"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 1
+
+[node name="VSplitContainer" type="VSplitContainer" parent="FileExplorerContainer/FileExplorerWindow/GridContainer/FormationCreerFonctionnement/HowsMailsWorkingWindow/TabContainer/Etape 2"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="FileExplorerContainer/FileExplorerWindow/GridContainer/FormationCreerFonctionnement/HowsMailsWorkingWindow/TabContainer/Etape 2/VSplitContainer"]
+layout_mode = 2
+texture = ExtResource("20_pyilq")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="FileExplorerContainer/FileExplorerWindow/GridContainer/FormationCreerFonctionnement/HowsMailsWorkingWindow/TabContainer/Etape 2/VSplitContainer"]
+layout_mode = 2
+text = "Avec le rouage vous pouvez changer les informations de la formation si le taux de réussite est trop bas "
+
+[node name="Formations" type="VBoxContainer" parent="."]
+custom_minimum_size = Vector2(125, 100)
+offset_left = 1750.0
+offset_top = 50.0
+offset_right = 1875.0
+offset_bottom = 175.0
+script = ExtResource("16_c3t4m")
+
+[node name="FileExplorerTextureButton" type="TextureButton" parent="Formations"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+texture_normal = ExtResource("3_qh8jc")
+texture_pressed = ExtResource("10_nqtgg")
+stretch_mode = 5
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Formations"]
+custom_minimum_size = Vector2(75, 25)
+layout_mode = 2
+size_flags_vertical = 3
+bbcode_enabled = true
+text = "[center]Liste des formations[/center]"
+fit_content = true
+scroll_active = false
+tab_size = 2
+
+[node name="FormationWindow" type="Window" parent="Formations"]
+title = "Liste des formations"
+initial_position = 2
+size = Vector2i(1000, 600)
+visible = false
+script = ExtResource("17_grwio")
+
+[node name="FormationWindowScrollContainer" type="ScrollContainer" parent="Formations/FormationWindow"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="FormationWindowVBoxContainer" type="VBoxContainer" parent="Formations/FormationWindow/FormationWindowScrollContainer"]
+layout_mode = 2
+
+[node name="PanelMail" type="PanelContainer" parent="."]
+offset_left = 1534.0
+offset_top = 760.0
+offset_right = 1809.0
+offset_bottom = 995.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_dpj4c")
+script = ExtResource("11_dyejx")
+
+[node name="BoutonMail" type="TextureButton" parent="PanelMail"]
+layout_mode = 2
+texture_normal = ExtResource("20_7veut")
+texture_pressed = ExtResource("21_3lkn0")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="PageMail" type="Window" parent="PanelMail"]
+mode = 1
+title = "Mail"
+initial_position = 1
+size = Vector2i(1000, 600)
+visible = false
+
+[node name="PanelFondgris" type="Panel" parent="PanelMail/PageMail"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_4dkif")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="PanelMail/PageMail/PanelFondgris"]
+custom_minimum_size = Vector2(1000, 600)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelMail/PageMail/PanelFondgris/ScrollContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+script = ExtResource("21_q22r0")
+
+[node name="ExempleMail" parent="PanelMail/PageMail/PanelFondgris/ScrollContainer/VBoxContainer" instance=ExtResource("22_1wtnn")]
+visible = false
+custom_minimum_size = Vector2(1040, 140)
+layout_mode = 2
+
+[node name="TextureButton" type="TextureButton" parent="."]
+offset_left = 1340.0
+offset_top = 1013.0
+offset_right = 1707.0
+offset_bottom = 1066.0
+texture_normal = ExtResource("26_byq3j")
+texture_pressed = ExtResource("26_y6i4d")
+stretch_mode = 5
+
+[node name="barTauxReussite" type="ProgressBar" parent="."]
+offset_left = 832.0
+offset_top = 1027.0
+offset_right = 1088.0
+offset_bottom = 1059.0
+script = ExtResource("24_hfs7x")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 66.0
+offset_top = 272.0
+offset_right = 168.0
+offset_bottom = 322.0
+text = "Création de formations"
+
+[node name="GameOver" parent="." instance=ExtResource("29_8dv2t")]
+visible = false
+focus_mode = 1
+
+[node name="GameOverButton" type="Button" parent="."]
+visible = false
+offset_left = 1162.0
+offset_top = 1026.0
+offset_right = 1281.0
+offset_bottom = 1058.0
+text = "Game Over"
+
+[node name="WindowInfoSup" parent="." instance=ExtResource("30_1hxs5")]
+
+[node name="ButtonInfo" type="Button" parent="."]
+offset_left = 70.0
+offset_top = 346.0
+offset_right = 163.0
+offset_bottom = 436.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_3ky2x")
+icon = ExtResource("30_34m8q")
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("31_mapib")
+
+[node name="ButtonEscape" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+offset_left = 13.0
+offset_top = 1008.0
+offset_right = 250.0
+offset_bottom = 1069.0
+
+[node name="Label" type="Label" parent="."]
+offset_left = 71.0
+offset_top = 443.0
+offset_right = 166.0
+offset_bottom = 466.0
+text = "Messagerie"
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="."]
+offset_left = 590.0
+offset_top = 1027.0
+offset_right = 841.0
+offset_bottom = 1059.0
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+text = "Taux de réussite global :"
+
+[connection signal="pressed" from="FormationChoseContainer/TextureButton" to="FormationChoseContainer" method="_on_texture_button_pressed"]
+[connection signal="about_to_popup" from="FormationChoseContainer/FormationChose" to="FormationChoseContainer/FormationChose" method="_on_about_to_popup"]
+[connection signal="close_requested" from="FormationChoseContainer/FormationChose" to="FormationChoseContainer" method="_on_formation_chose_close_requested"]
+[connection signal="visibility_changed" from="FormationChoseContainer/FormationChose" to="FormationChoseContainer/FormationChose" method="_on_visibility_changed"]
+[connection signal="close_requested" from="EscapeMenu" to="EscapeMenu" method="_on_close_requested"]
+[connection signal="pressed" from="EscapeMenu/LeaveGameButton" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="EscapeMenu/GameOptionButton" to="EscapeMenu" method="_on_game_option_button_pressed"]
+[connection signal="close_requested" from="EscapeMenu/OptionMenu" to="EscapeMenu/OptionMenu" method="_on_close_requested"]
+[connection signal="pressed" from="FileExplorerContainer/FileExplorerTextureButton" to="FileExplorerContainer" method="_on_texture_button_pressed"]
+[connection signal="close_requested" from="FileExplorerContainer/FileExplorerWindow" to="FileExplorerContainer/FileExplorerWindow" method="_on_close_requested"]
+[connection signal="pressed" from="FileExplorerContainer/FileExplorerWindow/GridContainer/HowsMailsWorkingContainer/TextureButton" to="FileExplorerContainer/FileExplorerWindow/GridContainer/HowsMailsWorkingContainer" method="_on_texture_button_pressed"]
+[connection signal="close_requested" from="FileExplorerContainer/FileExplorerWindow/GridContainer/HowsMailsWorkingContainer/HowsMailsWorkingWindow" to="FileExplorerContainer/FileExplorerWindow/GridContainer/HowsMailsWorkingContainer/HowsMailsWorkingWindow" method="_on_close_requested"]
+[connection signal="pressed" from="FileExplorerContainer/FileExplorerWindow/GridContainer/FormationCreerFonctionnement/TextureButton" to="FileExplorerContainer/FileExplorerWindow/GridContainer/FormationCreerFonctionnement" method="_on_texture_button_pressed"]
+[connection signal="close_requested" from="FileExplorerContainer/FileExplorerWindow/GridContainer/FormationCreerFonctionnement/HowsMailsWorkingWindow" to="FileExplorerContainer/FileExplorerWindow/GridContainer/FormationCreerFonctionnement/HowsMailsWorkingWindow" method="_on_close_requested"]
+[connection signal="pressed" from="Formations/FileExplorerTextureButton" to="Formations" method="_on_file_explorer_texture_button_pressed"]
+[connection signal="close_requested" from="Formations/FormationWindow" to="Formations/FormationWindow" method="_on_close_requested"]
+[connection signal="focus_entered" from="Formations/FormationWindow" to="Formations/FormationWindow" method="_on_focus_entered"]
+[connection signal="window_input" from="Formations/FormationWindow" to="Formations/FormationWindow" method="_on_window_input"]
+[connection signal="pressed" from="PanelMail/BoutonMail" to="PanelMail" method="_on_bouton_mail_pressed"]
+[connection signal="close_requested" from="PanelMail/PageMail" to="PanelMail" method="_on_page_mail_close_requested"]
+[connection signal="new_mail_generated" from="PanelMail/PageMail/PanelFondgris/ScrollContainer/VBoxContainer" to="PanelMail" method="_on_v_box_container_new_mail_generated"]
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
+[connection signal="pressed" from="TextureButton" to="FormationChoseContainer/FormationChose" method="_on_texture_button_pressed"]
+[connection signal="pressed" from="GameOverButton" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="ButtonInfo" to="." method="_on_button_info_pressed"]
+[connection signal="pressed" from="ButtonEscape" to="." method="_on_button_escape_pressed"]

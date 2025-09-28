@@ -1,0 +1,150 @@
+[gd_scene load_steps=4 format=3 uid="uid://d20xmtt7mkgi2"]
+
+[ext_resource type="Script" path="res://Scripts/panel_info_sup.gd" id="1_dw10w"]
+[ext_resource type="Script" path="res://Scripts/v_box_container2.gd" id="2_7bk07"]
+[ext_resource type="Script" path="res://Scripts/vbox_2.gd" id="3_rsdoc"]
+
+[node name="WindowInfoSup" type="Window"]
+initial_position = 1
+size = Vector2i(1050, 500)
+visible = false
+
+[node name="PanelInfoSup" type="Panel" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_dw10w")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelInfoSup"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/separation = 30
+
+[node name="Label" type="Label" parent="PanelInfoSup/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "Vous voulez contacter un superieur hierarchique ?"
+horizontal_alignment = 1
+
+[node name="TextureButton" type="Button" parent="PanelInfoSup/VBoxContainer"]
+custom_minimum_size = Vector2(1000, 50)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 25
+text = "Rectorat"
+alignment = 0
+
+[node name="WindowInfoSupDetailler" type="Window" parent="PanelInfoSup/VBoxContainer/TextureButton"]
+initial_position = 1
+size = Vector2i(1000, 500)
+visible = false
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelInfoSup/VBoxContainer/TextureButton/WindowInfoSupDetailler"]
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -23.5
+offset_bottom = 23.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_7bk07")
+
+[node name="lblNomSuperieur" type="Label" parent="PanelInfoSup/VBoxContainer/TextureButton/WindowInfoSupDetailler/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Rectorat"
+horizontal_alignment = 1
+
+[node name="ButtonBUT" type="Button" parent="PanelInfoSup/VBoxContainer/TextureButton/WindowInfoSupDetailler/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Des informations sur les BUT ?"
+
+[node name="ButtonFAC" type="Button" parent="PanelInfoSup/VBoxContainer/TextureButton/WindowInfoSupDetailler/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Des informations sur la FAC ?"
+
+[node name="ButtonPrepa" type="Button" parent="PanelInfoSup/VBoxContainer/TextureButton/WindowInfoSupDetailler/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Des informations sur les prépas ?"
+
+[node name="ButtonBTS" type="Button" parent="PanelInfoSup/VBoxContainer/TextureButton/WindowInfoSupDetailler/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Des informations sur les BTS ?"
+
+[node name="ReponseSuperieur1" type="Label" parent="PanelInfoSup/VBoxContainer/TextureButton/WindowInfoSupDetailler/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "Dis moi ce qu'il te faut !"
+
+[node name="TextureButton2" type="Button" parent="PanelInfoSup/VBoxContainer"]
+custom_minimum_size = Vector2(1000, 50)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 25
+text = "Directeur de composante"
+alignment = 0
+
+[node name="WindowInfoSupDetailler2" type="Window" parent="PanelInfoSup/VBoxContainer/TextureButton2"]
+initial_position = 1
+size = Vector2i(1000, 500)
+visible = false
+
+[node name="Vbox2" type="VBoxContainer" parent="PanelInfoSup/VBoxContainer/TextureButton2/WindowInfoSupDetailler2"]
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -23.5
+offset_bottom = 23.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("3_rsdoc")
+
+[node name="Label" type="Label" parent="PanelInfoSup/VBoxContainer/TextureButton2/WindowInfoSupDetailler2/Vbox2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "directeur de composante"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="PanelInfoSup/VBoxContainer/TextureButton2/WindowInfoSupDetailler2/Vbox2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Il faudrait combien d'enseignant pour n étudiants ?"
+
+[node name="Button2" type="Button" parent="PanelInfoSup/VBoxContainer/TextureButton2/WindowInfoSupDetailler2/Vbox2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Il faudrait combien d'employer dans les ressources humaines ?"
+
+[node name="Button3" type="Button" parent="PanelInfoSup/VBoxContainer/TextureButton2/WindowInfoSupDetailler2/Vbox2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "C'est quoi la satisfaction étudiante / enseignante ?"
+
+[node name="ReponseSuperieur1" type="Label" parent="PanelInfoSup/VBoxContainer/TextureButton2/WindowInfoSupDetailler2/Vbox2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "Dis moi ce qu'il te faut !"
+
+[connection signal="close_requested" from="." to="PanelInfoSup" method="_on_window_info_sup_close_requested"]
+[connection signal="pressed" from="PanelInfoSup/VBoxContainer/TextureButton" to="PanelInfoSup" method="_on_texture_button_pressed"]
+[connection signal="close_requested" from="PanelInfoSup/VBoxContainer/TextureButton/WindowInfoSupDetailler" to="PanelInfoSup" method="_on_window_info_sup_detailler_close_requested"]
+[connection signal="pressed" from="PanelInfoSup/VBoxContainer/TextureButton/WindowInfoSupDetailler/VBoxContainer/ButtonBUT" to="PanelInfoSup/VBoxContainer/TextureButton/WindowInfoSupDetailler/VBoxContainer" method="_on_button_pressed"]
+[connection signal="pressed" from="PanelInfoSup/VBoxContainer/TextureButton/WindowInfoSupDetailler/VBoxContainer/ButtonFAC" to="PanelInfoSup/VBoxContainer/TextureButton/WindowInfoSupDetailler/VBoxContainer" method="_on_button_2_pressed"]
+[connection signal="pressed" from="PanelInfoSup/VBoxContainer/TextureButton/WindowInfoSupDetailler/VBoxContainer/ButtonPrepa" to="PanelInfoSup/VBoxContainer/TextureButton/WindowInfoSupDetailler/VBoxContainer" method="_on_button_3_pressed"]
+[connection signal="pressed" from="PanelInfoSup/VBoxContainer/TextureButton/WindowInfoSupDetailler/VBoxContainer/ButtonBTS" to="PanelInfoSup/VBoxContainer/TextureButton/WindowInfoSupDetailler/VBoxContainer" method="_on_button_4_pressed"]
+[connection signal="pressed" from="PanelInfoSup/VBoxContainer/TextureButton2" to="PanelInfoSup" method="_on_texture_button_2_pressed"]
+[connection signal="close_requested" from="PanelInfoSup/VBoxContainer/TextureButton2/WindowInfoSupDetailler2" to="PanelInfoSup" method="_on_window_info_sup_detailler_2_close_requested"]
+[connection signal="pressed" from="PanelInfoSup/VBoxContainer/TextureButton2/WindowInfoSupDetailler2/Vbox2/Button" to="PanelInfoSup/VBoxContainer/TextureButton2/WindowInfoSupDetailler2/Vbox2" method="_on_button_pressed"]
+[connection signal="pressed" from="PanelInfoSup/VBoxContainer/TextureButton2/WindowInfoSupDetailler2/Vbox2/Button2" to="PanelInfoSup/VBoxContainer/TextureButton2/WindowInfoSupDetailler2/Vbox2" method="_on_button_2_pressed"]
+[connection signal="pressed" from="PanelInfoSup/VBoxContainer/TextureButton2/WindowInfoSupDetailler2/Vbox2/Button3" to="PanelInfoSup/VBoxContainer/TextureButton2/WindowInfoSupDetailler2/Vbox2" method="_on_button_3_pressed"]

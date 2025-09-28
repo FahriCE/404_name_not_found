@@ -1,0 +1,119 @@
+[gd_scene load_steps=11 format=3 uid="uid://buotix6p5747o"]
+
+[ext_resource type="Texture2D" uid="uid://34usf66axol6" path="res://Images/Start_Interface_Off.png" id="1_i7tjn"]
+[ext_resource type="Script" path="res://Scripts/main_menu.gd" id="1_ifh64"]
+
+[sub_resource type="SystemFont" id="SystemFont_pp33q"]
+font_names = PackedStringArray("Impact")
+font_weight = 425
+subpixel_positioning = 0
+
+[sub_resource type="SystemFont" id="SystemFont_ki3t3"]
+font_names = PackedStringArray("Impact")
+subpixel_positioning = 0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1h4ah"]
+bg_color = Color(0.0666667, 0.211765, 0.564706, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uvxjj"]
+bg_color = Color(0.0664256, 0.213142, 0.565882, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cpnhk"]
+bg_color = Color(0.133333, 0.341176, 0.835294, 1)
+
+[sub_resource type="SystemFont" id="SystemFont_yltxl"]
+font_names = PackedStringArray("Impact")
+subpixel_positioning = 0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m27mn"]
+bg_color = Color(0.0666667, 0.211765, 0.564706, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8i8c7"]
+bg_color = Color(0.133333, 0.341176, 0.835294, 1)
+
+[node name="Main_menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ifh64")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+modulate = Color(1, 1, 1, 0.294118)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_i7tjn")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 60
+
+[node name="Separator" type="Control" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="TitleLabel" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0.133333, 0.341176, 0.835294, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = 0
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 8
+theme_override_constants/outline_size = 24
+theme_override_fonts/font = SubResource("SystemFont_pp33q")
+theme_override_font_sizes/font_size = 100
+text = "GAME TITLE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 18
+alignment = 1
+
+[node name="Separator" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Start_Button" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(222, 62)
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_ki3t3")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_1h4ah")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_uvxjj")
+theme_override_styles/normal = SubResource("StyleBoxFlat_cpnhk")
+text = "Start"
+
+[node name="Separator2" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Exit_Button" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(222, 62)
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_yltxl")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/pressed = SubResource("StyleBoxFlat_m27mn")
+theme_override_styles/normal = SubResource("StyleBoxFlat_8i8c7")
+text = "Quit
+"

@@ -1,0 +1,212 @@
+[
+	{
+		"id": 1,
+		"sender": "patron",
+		"content": "Bonjour et bienvenue dans l'équipe ! Vous êtes chargé de créer des formations post-bac adaptées aux besoins actuels. Ce tutoriel va vous aider à comprendre comment tout fonctionne. \n\nVotre première tâche est simple : créez une formation en informatique qui accueille 30 étudiants et 3 enseignants. Voici les étapes à suivre : \n1. Ouvrez la page de création de formation. \n2. Sélectionnez 'Informatique' dans la liste des formations. \n3. Configurez le nombre d'étudiants à 30 et d'enseignants à 3. \n4. Validez votre choix.\n\nUne fois terminé, vous verrez un récapitulatif de votre formation et l'impact sur la satisfaction générale. Bonne chance et n'oubliez pas : chaque décision compte !",
+		"date_sent": "2024-12-06 08:00:00",
+		"formation": "Informatique"
+	},
+	{
+		"id": 2,
+		"sender": "responsable RH",
+		"content": "Une nouvelle formation en informatique est à préparer. Prévoyez un effectif étudiant conséquent pour cette spécialité.",
+		"date_sent": "2024-12-06 12:00:00",
+		"formation": "Informatique"
+	},
+	{
+		"id": 3,
+		"sender": "directeur \nacadémique",
+		"content": "Mettez en place une formation en médecine. Le besoin en places pour les étudiants est important.",
+		"date_sent": "2024-12-06 15:30:00",
+		"formation": "Médecine"
+	},
+	{
+		"id": 4,
+		"sender": "responsable RH",
+		"content": "Une formation en mécanique automobile doit être ajoutée. Assurez-vous qu'elle puisse accueillir un bon nombre d'étudiants.",
+		"date_sent": "2024-12-06 18:00:00",
+		"formation": "Automobile"
+	},
+	{
+		"id": 5,
+		"sender": "directeur \nacadémique",
+		"content": "Travaillez sur une formation en big data. Cette spécialité est en forte demande.",
+		"date_sent": "2024-12-07 08:00:00",
+		"formation": "Informatique"
+	},
+	{
+		"id": 6,
+		"sender": "responsable \npédagogique",
+		"content": "Proposez une nouvelle formation en informatique. Les effectifs d'étudiants devraient être légèrement supérieurs à ceux des sessions précédentes.",
+		"date_sent": "2024-12-07 11:00:00",
+		"formation": "Informatique"
+	},
+	{
+		"id": 7,
+		"sender": "responsable RH",
+		"content": "Créez une formation supplémentaire en médecine. N'oubliez pas de prévoir suffisamment de ressources pour les enseignants.",
+		"date_sent": "2024-12-07 13:30:00",
+		"formation": "Médecine"
+	},
+	{
+		"id": 8,
+		"sender": "patron",
+		"content": "Ajoutez une formation orientée vers la mécanique automobile. Le nombre de places étudiantes doit être raisonnable.",
+		"date_sent": "2024-12-07 16:00:00",
+		"formation": "Automobile"
+	},
+	{
+		"id": 9,
+		"sender": "directeur \nacadémique",
+		"content": "Une formation spécifique en big data est à prioriser. Elle accueillera une cohorte moyenne d'étudiants.",
+		"date_sent": "2024-12-07 18:30:00",
+		"formation": "Informatique"
+	},
+	{
+		"id": 10,
+		"sender": "responsable \npédagogique",
+		"content": "Lancez une formation en informatique. Prévoyez un effectif cohérent avec la demande actuelle.",
+		"date_sent": "2024-12-08 09:00:00",
+		"formation": "Informatique"
+	},
+	{
+		"id": 11,
+		"sender": "responsable RH",
+		"content": "Développez une formation en médecine. Les enseignants nécessaires seront précisés plus tard.",
+		"date_sent": "2024-12-08 12:00:00",
+		"formation": "Médecine"
+	},
+	{
+		"id": 12,
+		"sender": "patron",
+		"content": "Travaillez sur une nouvelle formation en mécanique automobile. L'effectif doit rester modulable.",
+		"date_sent": "2024-12-08 14:30:00",
+		"formation": "Automobile"
+	},
+	{
+		"id": 13,
+		"sender": "directeur \nacadémique",
+		"content": "Ajoutez une formation en big data. Un nombre réduit d'étudiants est attendu.",
+		"date_sent": "2024-12-08 17:00:00",
+		"formation": "Informatique"
+	},
+	{
+		"id": 14,
+		"sender": "responsable \npédagogique",
+		"content": "Lancez une formation en informatique. Elle doit pouvoir répondre à une demande croissante.",
+		"date_sent": "2024-12-08 19:30:00",
+		"formation": "Informatique"
+	},
+	{
+		"id": 15,
+		"sender": "responsable RH",
+		"content": "Une formation en mécanique automobile est nécessaire. Assurez-vous qu'elle soit bien structurée.",
+		"date_sent": "2024-12-09 08:00:00",
+		"formation": "Automobile"
+	},
+	{
+		"id": 16,
+		"sender": "directeur \nacadémique",
+		"content": "Créez une nouvelle session pour la formation en médecine. Il faudra coordonner avec les équipes.",
+		"date_sent": "2024-12-09 10:00:00",
+		"formation": "Médecine"
+	},
+	{
+		"id": 17,
+		"sender": "patron",
+		"content": "Ajoutez une session spéciale en informatique pour les étudiants en retard dans leur parcours.",
+		"date_sent": "2024-12-09 12:00:00",
+		"formation": "Informatique"
+	},
+	{
+		"id": 18,
+		"sender": "responsable \npédagogique",
+		"content": "Travaillez sur une formation en big data. Elle doit inclure des effectifs équilibrés.",
+		"date_sent": "2024-12-09 14:00:00",
+		"formation": "Informatique"
+	},
+	{
+		"id": 19,
+		"sender": "responsable RH",
+		"content": "Nous avons besoin d'une formation en informatique. N'oubliez pas de prévoir une grande salle.",
+		"date_sent": "2024-12-09 16:00:00",
+		"formation": "Informatique"
+	},
+	{
+		"id": 20,
+		"sender": "directeur \nacadémique",
+		"content": "Une nouvelle session en médecine est attendue. Prévoyez une date avant le début du trimestre.",
+		"date_sent": "2024-12-09 18:00:00",
+		"formation": "Médecine"
+	},
+	{
+		"id": 21,
+		"sender": "responsable \npédagogique",
+		"content": "Créez une formation orientée vers la mécanique automobile. Nous ajusterons les ressources si besoin.",
+		"date_sent": "2024-12-10 08:00:00",
+		"formation": "Automobile"
+	},
+	{
+		"id": 22,
+		"sender": "responsable RH",
+		"content": "Une session en big data est à prioriser. Coordonnez-vous avec les enseignants disponibles.",
+		"date_sent": "2024-12-10 10:00:00",
+		"formation": "Informatique"
+	},
+	{
+		"id": 23,
+		"sender": "directeur \nacadémique",
+		"content": "Proposez une nouvelle session en médecine. Nous devons répondre à une forte demande étudiante.",
+		"date_sent": "2024-12-10 12:00:00",
+		"formation": "Médecine"
+	},
+	{
+		"id": 24,
+		"sender": "patron",
+		"content": "Lancez une nouvelle formation en informatique pour les étudiants avancés.",
+		"date_sent": "2024-12-10 14:00:00",
+		"formation": "Informatique"
+	},
+	{
+		"id": 25,
+		"sender": "responsable RH",
+		"content": "Une formation en mécanique automobile est requise. N'oubliez pas les aspects pratiques.",
+		"date_sent": "2024-12-10 16:00:00",
+		"formation": "Automobile"
+	},
+	{
+		"id": 26,
+		"sender": "responsable \npédagogique",
+		"content": "Développez une session avancée en big data. Nous avons plusieurs enseignants disponibles.",
+		"date_sent": "2024-12-10 18:00:00",
+		"formation": "Informatique"
+	},
+	{
+		"id": 27,
+		"sender": "directeur \nacadémique",
+		"content": "Travaillez sur une formation en informatique. Une option en soirée pourrait être envisagée.",
+		"date_sent": "2024-12-11 08:00:00",
+		"formation": "Informatique"
+	},
+	{
+		"id": 28,
+		"sender": "responsable RH",
+		"content": "Ajoutez une session spéciale en mécanique automobile pour les étudiants professionnels.",
+		"date_sent": "2024-12-11 10:00:00",
+		"formation": "Automobile"
+	},
+	{
+		"id": 29,
+		"sender": "responsable \npédagogique",
+		"content": "Une session en big data est en forte demande. Ajustez les effectifs en fonction des ressources.",
+		"date_sent": "2024-12-11 12:00:00",
+		"formation": "Informatique"
+	},
+	{
+		"id": 30,
+		"sender": "patron",
+		"content": "Travaillez sur une formation avancée en médecine. Assurez-vous que tout soit prêt rapidement.",
+		"date_sent": "2024-12-11 14:00:00",
+		"formation": "Médecine"
+	}
+]
